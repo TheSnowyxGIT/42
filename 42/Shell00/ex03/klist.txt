@@ -1,0 +1,5 @@
+Credentials cache: API:135D46DA-68ED-4A90-B741-E9BBC18183A8
+        Principal: apingard@42.FR
+
+  Issued                Expires               Principal
+Jul  1 20:11:48 2019  Jul  8 20:11:48 2019  krbtgt/42.FR@42.FR
