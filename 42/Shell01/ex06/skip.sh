@@ -1,2 +1,2 @@
 #!/bin/sh
-ls -l | awk '!(NR%2){print}'
+ls -l | awk '(NR%2){print}'
