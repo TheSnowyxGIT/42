@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apingard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/08 15:09:04 by apingard          #+#    #+#             */
-/*   Updated: 2019/07/10 09:34:51 by apingard         ###   ########.fr       */
+/*   Created: 2019/07/10 10:49:54 by apingard          #+#    #+#             */
+/*   Updated: 2019/07/10 10:57:39 by apingard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_fibonacci(int index)
+#include <stdlib.h>
+
+char	*ft_strdup(char *src)
 {
-	if (index < 0)
-		return (-1);
-	if (index == 0 || index == 1)
-		return (index);
-	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+	int		i;
+	char	*allocation;
+
+	i = 0;
+	while (src[i])
+		i++;
+	allocation = malloc(sizeof(*allocation) * i);
+	if (allocation == NULL)
+		return (NULL);
+	return (allocation);
 }

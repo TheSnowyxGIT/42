@@ -6,7 +6,7 @@
 /*   By: apingard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 08:58:31 by apingard          #+#    #+#             */
-/*   Updated: 2019/07/09 17:13:55 by apingard         ###   ########.fr       */
+/*   Updated: 2019/07/10 13:13:34 by apingard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	ft_putstr(char *str)
 
 int		main(int argc, char **argv)
 {
+	argc = 0;
 	ft_putstr(argv[0]);
 	write(1, "\n", 1);
 	return (0);

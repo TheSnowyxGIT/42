@@ -6,7 +6,7 @@
 /*   By: apingard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 01:37:35 by apingard          #+#    #+#             */
-/*   Updated: 2019/07/09 12:59:53 by apingard         ###   ########.fr       */
+/*   Updated: 2019/07/10 00:31:51 by apingard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -80,11 +80,11 @@ int        main(int argc, char **argv)
 	int index;
 	int size;
 
-	a = 0;
-		while (argv[a])
-			a++;
+	a = 1;
+	while (argv[a])
+		a++;
 	size = a;
-	a = 0;
+	a = 1;
 	while (argv[a])
 	{
 		index = ft_getind_valmin(argv, size, a);
@@ -93,6 +93,9 @@ int        main(int argc, char **argv)
 	}
 	a = 1;
 	while (argv[a])
+	{
 		ft_putstr(argv[a++]);
+		write(1, "\n", 1);
+	}
 	return (0);
 }

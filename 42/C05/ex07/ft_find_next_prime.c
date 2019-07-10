@@ -6,39 +6,28 @@
 /*   By: apingard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/08 23:27:29 by apingard          #+#    #+#             */
-/*   Updated: 2019/07/09 13:15:07 by apingard         ###   ########.fr       */
+/*   Updated: 2019/07/10 15:54:34 by apingard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_is_prime(int nb)
-{
-	int		i;
-	int		valint;
-	float	valflt;
-	int		res;
-
-	res = 1;
-	i = 1;
-	while (i != nb)
-	{
-		valint = nb / i;
-		valflt = (float)nb / (float)i;
-		if (valflt == (float)valint)
-		{
-			if (i != 1 && i != nb)
-				res = 0;
-		}
-		i++;
-	}
-	return (res);
-}
-
 int		ft_find_next_prime(int nb)
 {
-	int i;
+	int x;
 
-	i = nb;
-	while (ft_is_prime(i) == 0)
-		i++;
-	return (i);
+	x = 2;
+	if (nb < 2)
+		return (0);
+	while (nb >= 2)
+	{
+		while (nb % x != 0)
+			x++;
+		if (nb == x)
+			return (nb);
+		else
+		{
+			nb++;
+			x = 2;
+		}
+	}
+	return (0);
 }
